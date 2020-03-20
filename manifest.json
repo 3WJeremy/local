@@ -1,0 +1,15 @@
+{
+  "short_name": "Directory",
+  "name": "Local Business Directory",
+  "icons": [
+    {
+      "src": "3w-logo.png",
+      "sizes": "192x192 32x32",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
