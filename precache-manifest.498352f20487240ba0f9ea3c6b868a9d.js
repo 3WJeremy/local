@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b31a60e72ddae87bebcd3ec094d7c09",
+    "revision": "33d224491afaf8a0b47783dc42b2cb74",
     "url": "/local/index.html"
   },
   {
-    "revision": "c46820e52162c57bb034",
+    "revision": "8a747b379c08d2add74b",
     "url": "/local/static/css/2.246eba7f.chunk.css"
   },
   {
-    "revision": "c46820e52162c57bb034",
-    "url": "/local/static/js/2.74540652.chunk.js"
+    "revision": "8a747b379c08d2add74b",
+    "url": "/local/static/js/2.23fc18b2.chunk.js"
   },
   {
     "revision": "ac9fac6c8e755a8efecd01981adb88e6",
-    "url": "/local/static/js/2.74540652.chunk.js.LICENSE.txt"
+    "url": "/local/static/js/2.23fc18b2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f06ad8c8260e8907211b",
-    "url": "/local/static/js/main.b291b39b.chunk.js"
+    "revision": "7c0caae3daab53a3b2c6",
+    "url": "/local/static/js/main.3529dc2f.chunk.js"
   },
   {
     "revision": "c8596ddbfec9f9d9c438",
@@ -246,5 +246,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b41f0f61b15f8da34237c9798f2c41a8",
     "url": "/local/static/media/tyra-beavers.b41f0f61.png"
+  },
+  {
+    "revision": "77798dd6f334938d4b93c2cea570f6dc",
+    "url": "/local/static/media/wells-fargo.77798dd6.png"
   }
 ]);

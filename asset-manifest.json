@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/local/static/js/main.b291b39b.chunk.js",
-    "main.js.map": "/local/static/js/main.b291b39b.chunk.js.map",
+    "main.js": "/local/static/js/main.3529dc2f.chunk.js",
+    "main.js.map": "/local/static/js/main.3529dc2f.chunk.js.map",
     "runtime-main.js": "/local/static/js/runtime-main.746a3dad.js",
     "runtime-main.js.map": "/local/static/js/runtime-main.746a3dad.js.map",
     "static/css/2.246eba7f.chunk.css": "/local/static/css/2.246eba7f.chunk.css",
-    "static/js/2.74540652.chunk.js": "/local/static/js/2.74540652.chunk.js",
-    "static/js/2.74540652.chunk.js.map": "/local/static/js/2.74540652.chunk.js.map",
+    "static/js/2.23fc18b2.chunk.js": "/local/static/js/2.23fc18b2.chunk.js",
+    "static/js/2.23fc18b2.chunk.js.map": "/local/static/js/2.23fc18b2.chunk.js.map",
     "index.html": "/local/index.html",
-    "precache-manifest.a0dd49af06be738655ad2a1d984c09f7.js": "/local/precache-manifest.a0dd49af06be738655ad2a1d984c09f7.js",
+    "precache-manifest.498352f20487240ba0f9ea3c6b868a9d.js": "/local/precache-manifest.498352f20487240ba0f9ea3c6b868a9d.js",
     "service-worker.js": "/local/service-worker.js",
     "static/css/2.246eba7f.chunk.css.map": "/local/static/css/2.246eba7f.chunk.css.map",
-    "static/js/2.74540652.chunk.js.LICENSE.txt": "/local/static/js/2.74540652.chunk.js.LICENSE.txt",
+    "static/js/2.23fc18b2.chunk.js.LICENSE.txt": "/local/static/js/2.23fc18b2.chunk.js.LICENSE.txt",
     "static/media/activities.png": "/local/static/media/activities.9dc48323.png",
     "static/media/advanced-audiology.png": "/local/static/media/advanced-audiology.cc789b4e.png",
     "static/media/advertisers.png": "/local/static/media/advertisers.acdfbf17.png",
@@ -44,12 +44,13 @@
     "static/media/index.css": "/local/static/media/roboto-latin-900italic.ebf6d164.woff2",
     "static/media/total-financial-solutions.png": "/local/static/media/total-financial-solutions.289ae85a.png",
     "static/media/travel.png": "/local/static/media/travel.6588aed3.png",
-    "static/media/tyra-beavers.png": "/local/static/media/tyra-beavers.b41f0f61.png"
+    "static/media/tyra-beavers.png": "/local/static/media/tyra-beavers.b41f0f61.png",
+    "static/media/wells-fargo.png": "/local/static/media/wells-fargo.77798dd6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.746a3dad.js",
     "static/css/2.246eba7f.chunk.css",
-    "static/js/2.74540652.chunk.js",
-    "static/js/main.b291b39b.chunk.js"
+    "static/js/2.23fc18b2.chunk.js",
+    "static/js/main.3529dc2f.chunk.js"
   ]
 }
