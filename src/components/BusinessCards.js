@@ -88,6 +88,7 @@ const BusinessCards = props => {
             setLoading(false);
           } else {
             if (byDistance) {
+              setBusinesses([]);
               setError({ message: 'No businesses available.' });
             } else {
               getBusinesses(true);

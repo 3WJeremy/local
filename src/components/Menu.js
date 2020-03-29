@@ -52,7 +52,7 @@ const Menu = props => {
         <Toolbar className={classes.toolbar}>
           <img src={logo} className={classes.logo} alt='Logo' />
           <div>
-            <Link
+            {/* <Link
               href='https://wealthwisdomwellness.us/'
               className={classes.link}
             >
@@ -75,7 +75,7 @@ const Menu = props => {
               className={classes.link}
             >
               Advertisers
-            </Link>
+            </Link> */}
             <Link
               component={RouterLink}
               to='/wealth'
@@ -83,12 +83,12 @@ const Menu = props => {
             >
               Directory
             </Link>
-            <Link
+            {/* <Link
               href='https://wealthwisdomwellness.us/contact'
               className={classes.link}
             >
               Contact
-            </Link>
+            </Link> */}
           </div>
         </Toolbar>
       </AppBar>
