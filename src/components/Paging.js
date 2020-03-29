@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -12,6 +14,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     margin: theme.spacing(2, 0)
+  },
+  card: {
+    width: '300px',
+    textAlign: 'center'
   }
 }));
 
@@ -20,25 +26,29 @@ const Paging = props => {
 
   return (
     <div className={classes.root}>
-      <Button
-        key='backButton'
-        onClick={props.onPrevious}
-        disabled={props.page === 1 ? true : false}
-      >
-        <ArrowBackIosIcon /> Previous
-      </Button>
-      <Button
-        key='nextButton'
-        onClick={props.onNext}
-        disabled={
-          props.page * settings.resultsPerPage <
-          props.total + settings.resultsPerPage - 1
-            ? true
-            : false
-        }
-      >
-        Next <ArrowForwardIosIcon />
-      </Button>
+      <Card className={classes.card}>
+        <CardContent>
+          <Button
+            key='backButton'
+            onClick={props.onPrevious}
+            disabled={props.page === 1 ? true : false}
+          >
+            <ArrowBackIosIcon /> Previous
+          </Button>
+          <Button
+            key='nextButton'
+            onClick={props.onNext}
+            disabled={
+              props.page * settings.resultsPerPage <
+              props.total + settings.resultsPerPage - 1
+                ? true
+                : false
+            }
+          >
+            Next <ArrowForwardIosIcon />
+          </Button>
+        </CardContent>
+      </Card>
     </div>
   );
 };

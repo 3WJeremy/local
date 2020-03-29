@@ -403,7 +403,11 @@ const categories = [
         title: 'Medical',
         image: 'medical.png',
         tertiary: [
-          { id: 'audiologist', title: 'Audiologist', yelp: ['audiologist'] },
+          {
+            id: 'audiologist',
+            title: 'Audiologist',
+            yelp: ['audiologist', 'hearingaidproviders']
+          },
           {
             id: 'cosmeticdentists',
             title: 'Cosmetic Dentists',
@@ -436,7 +440,7 @@ const categories = [
           {
             id: 'hearingaidproviders',
             title: 'Hearing Aid Providers',
-            yelp: ['hearingaidproviders']
+            yelp: ['hearingaidproviders', 'audiologists']
           },
           { id: 'naturopathic', title: 'Holistic', yelp: ['naturopathic'] },
           {

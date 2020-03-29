@@ -18,6 +18,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-around'
+  },
+  cols: {
+    display: 'flex',
+    flexDirection: 'column'
   }
 }));
 
@@ -44,29 +48,51 @@ const BusinessCards = props => {
   }, [primary, secondary, tertiary]);
 
   useEffect(() => {
-    const getBusinesses = async () => {
-      let url = settings.yelpSearchUrl;
-      // if (process.env.NODE_ENV === 'development') {
-      url = settings.proxy + settings.yelpSearchUrl;
-      // }
+    const getParams = (byDistance = false) => {
+      let params = {
+        categories: yelpCategories.join(','),
+        locale: 'en_US',
+        limit: settings.resultsPerPage,
+        offset: offset
+      };
+      if (byDistance) {
+        return {
+          ...params,
+          latitude: settings.latitude,
+          longitude: settings.longitude,
+          radius: settings.radius,
+          sort_by: 'distance'
+        };
+      }
+      return {
+        ...params,
+        location: settings.location,
+        sort_by: 'distance'
+      };
+    };
+
+    const getBusinesses = async (byDistance = false) => {
+      const proxyUrl = settings.proxy + settings.yelpSearchUrl;
       await axios
-        .get(url, {
+        .get(proxyUrl, {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
           },
-          params: {
-            location: settings.location,
-            categories: yelpCategories.join(','),
-            locale: 'en_US',
-            limit: settings.resultsPerPage,
-            offset: offset,
-            sort_by: 'best_match'
-          }
+          params: getParams(byDistance)
         })
         .then(result => {
-          setTotal(result.data.total);
-          setBusinesses(result.data.businesses);
-          setLoading(false);
+          const { total, businesses } = result.data;
+          if (businesses.length > 0) {
+            setTotal(total);
+            setBusinesses(businesses);
+            setLoading(false);
+          } else {
+            if (byDistance) {
+              setError({ message: 'No businesses available.' });
+            } else {
+              getBusinesses(true);
+            }
+          }
         })
         .catch(err => {
           setError(err);
@@ -109,16 +135,18 @@ const BusinessCards = props => {
             </Typography>
           )}
           {loading && <CircularProgress />}
-          <div className={classes.root}>
-            {businesses.map(b => (
-              <Business key={b.id} data={b} />
-            ))}
-            <Paging
-              onPrevious={previousPageHandler}
-              onNext={nextPageHandler}
-              page={page}
-              total={total}
-            />
+          <div className={classes.cols}>
+            <div className={classes.root}>
+              {businesses.map(b => (
+                <Business key={b.id} data={b} />
+              ))}
+              <Paging
+                onPrevious={previousPageHandler}
+                onNext={nextPageHandler}
+                page={page}
+                total={total}
+              />
+            </div>
           </div>
         </>
       )}
