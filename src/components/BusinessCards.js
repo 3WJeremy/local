@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -48,6 +48,9 @@ const BusinessCards = props => {
   }, [primary, secondary, tertiary]);
 
   useEffect(() => {
+    let unmounted = false;
+    let source = axios.CancelToken.source();
+
     const getParams = (byDistance = false) => {
       let params = {
         categories: yelpCategories.join(','),
@@ -73,37 +76,53 @@ const BusinessCards = props => {
 
     const getBusinesses = async (byDistance = false) => {
       const proxyUrl = settings.proxy + settings.yelpSearchUrl;
+
       await axios
         .get(proxyUrl, {
+          cancelToken: source.token,
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
           },
           params: getParams(byDistance)
         })
         .then(result => {
-          const { total, businesses } = result.data;
-          if (businesses.length > 0) {
-            setTotal(total);
-            setBusinesses(businesses);
-            setLoading(false);
-          } else {
-            if (byDistance) {
-              setBusinesses([]);
-              setError({ message: 'No businesses available.' });
+          if (!unmounted) {
+            const { total, businesses } = result.data;
+            if (businesses.length > 0) {
+              setTotal(total);
+              setBusinesses(businesses);
               setLoading(false);
+              setError(false);
             } else {
-              getBusinesses(true);
+              if (byDistance) {
+                setTotal(0);
+                setBusinesses([]);
+                setError({ message: 'No businesses available.' });
+                setLoading(false);
+              } else {
+                getBusinesses(true);
+              }
             }
           }
         })
         .catch(err => {
-          setError(err);
+          if (!unmounted) {
+            setTotal(0);
+            setBusinesses([]);
+            setError(err);
+            setLoading(false);
+          }
         });
     };
 
     if (yelpCategories.length > 0) {
       getBusinesses();
     }
+
+    return () => {
+      unmounted = true;
+      source.cancel('Canceling in cleanup');
+    };
   }, [yelpCategories, offset]);
 
   useEffect(() => {
@@ -142,12 +161,14 @@ const BusinessCards = props => {
               {businesses.map(b => (
                 <Business key={b.id} data={b} />
               ))}
-              <Paging
-                onPrevious={previousPageHandler}
-                onNext={nextPageHandler}
-                page={page}
-                total={total}
-              />
+              {total > 0 && (
+                <Paging
+                  onPrevious={previousPageHandler}
+                  onNext={nextPageHandler}
+                  page={page}
+                  total={total}
+                />
+              )}
             </div>
           </div>
         </>
