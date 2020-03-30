@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/local/static/js/main.1a780e7a.chunk.js",
-    "main.js.map": "/local/static/js/main.1a780e7a.chunk.js.map",
+    "main.js": "/local/static/js/main.31aa8071.chunk.js",
+    "main.js.map": "/local/static/js/main.31aa8071.chunk.js.map",
     "runtime-main.js": "/local/static/js/runtime-main.746a3dad.js",
     "runtime-main.js.map": "/local/static/js/runtime-main.746a3dad.js.map",
     "static/css/2.246eba7f.chunk.css": "/local/static/css/2.246eba7f.chunk.css",
-    "static/js/2.d7ba99cd.chunk.js": "/local/static/js/2.d7ba99cd.chunk.js",
-    "static/js/2.d7ba99cd.chunk.js.map": "/local/static/js/2.d7ba99cd.chunk.js.map",
+    "static/js/2.ee78d7ee.chunk.js": "/local/static/js/2.ee78d7ee.chunk.js",
+    "static/js/2.ee78d7ee.chunk.js.map": "/local/static/js/2.ee78d7ee.chunk.js.map",
     "index.html": "/local/index.html",
-    "precache-manifest.25d8fdb55f0bd798ee3061958d3b2496.js": "/local/precache-manifest.25d8fdb55f0bd798ee3061958d3b2496.js",
+    "precache-manifest.d2788f6016b95dda00f90f497357ebaa.js": "/local/precache-manifest.d2788f6016b95dda00f90f497357ebaa.js",
     "service-worker.js": "/local/service-worker.js",
     "static/css/2.246eba7f.chunk.css.map": "/local/static/css/2.246eba7f.chunk.css.map",
-    "static/js/2.d7ba99cd.chunk.js.LICENSE.txt": "/local/static/js/2.d7ba99cd.chunk.js.LICENSE.txt",
+    "static/js/2.ee78d7ee.chunk.js.LICENSE.txt": "/local/static/js/2.ee78d7ee.chunk.js.LICENSE.txt",
     "static/media/activities.png": "/local/static/media/activities.9dc48323.png",
     "static/media/advanced-audiology.png": "/local/static/media/advanced-audiology.cc789b4e.png",
     "static/media/advertisers.png": "/local/static/media/advertisers.acdfbf17.png",
@@ -32,7 +32,7 @@
     "static/media/investors-business-daily.png": "/local/static/media/investors-business-daily.d4ce0285.png",
     "static/media/jorge-perazzo.png": "/local/static/media/jorge-perazzo.75f2d637.png",
     "static/media/legal-services.png": "/local/static/media/legal-services.149d2252.png",
-    "static/media/logo.png": "/local/static/media/logo.72caba30.png",
+    "static/media/logo.png": "/local/static/media/logo.3978c8f9.png",
     "static/media/medical.png": "/local/static/media/medical.1c764113.png",
     "static/media/millennium-dental.png": "/local/static/media/millennium-dental.ad7dbefa.png",
     "static/media/my-shoes-my-journey.png": "/local/static/media/my-shoes-my-journey.4f82e7a1.png",
@@ -50,7 +50,7 @@
   "entrypoints": [
     "static/js/runtime-main.746a3dad.js",
     "static/css/2.246eba7f.chunk.css",
-    "static/js/2.d7ba99cd.chunk.js",
-    "static/js/main.1a780e7a.chunk.js"
+    "static/js/2.ee78d7ee.chunk.js",
+    "static/js/main.31aa8071.chunk.js"
   ]
 }
