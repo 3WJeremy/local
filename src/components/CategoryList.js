@@ -68,7 +68,7 @@ const CategoryList = ({ title, categories, sticky, selected, path }) => {
                 button
                 key={cat.id}
                 selected={cat.id === selected}
-                onClick={() => history.push(`${path}/cat.id`)}
+                onClick={() => history.push(`${path}/${cat.id}`)}
                 className={classes.item}
               >
                 <ListItemText primary={cat.title} />
