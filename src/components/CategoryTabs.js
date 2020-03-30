@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
@@ -17,7 +17,7 @@ const a11yProps = index => {
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgrounColor: theme.palette.secondary,
     marginTop: theme.spacing(2)
   },
   cards: {
@@ -25,34 +25,45 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const StyledTab = withStyles(theme => ({
+  root: {
+    '&:hover': {
+      color: '#be9b4d',
+      opacity: 1
+    },
+    '&$selected': {
+      color: theme.palette.primary
+    },
+    '&:focus': {
+      color: '#be9b4d'
+    }
+  },
+  selected: {}
+}))(props => <Tab {...props} />);
+
 const CategoryTabs = props => {
   const classes = useStyles();
   const cats = useSelector(state => state.cats);
   const history = useHistory();
 
   const tabChangeHandler = (_evt, t) => {
-    history.push(`${categories[t].id}`);
+    history.push(`/${categories[t].id}`);
   };
 
   return (
-    <>
-      {cats.secondary === '' && (
-        <div className={classes.root}>
-          <Tabs
-            value={categories.findIndex(c => c.id === cats.primary)}
-            indicatorColor='primary'
-            textColor='primary'
-            onChange={tabChangeHandler}
-            aria-label='Select a Category'
-            centered={true}
-          >
-            {categories.map((cat, i) => {
-              return <Tab key={i} label={cat.title} {...a11yProps(i)} />;
-            })}
-          </Tabs>
-        </div>
-      )}
-    </>
+    <div className={classes.root}>
+      <Tabs
+        value={categories.findIndex(c => c.id === cats.primary)}
+        indicatorColor='primary'
+        onChange={tabChangeHandler}
+        aria-label='Select a Category'
+        centered={true}
+      >
+        {categories.map((cat, i) => {
+          return <StyledTab key={i} label={cat.title} {...a11yProps(i)} />;
+        })}
+      </Tabs>
+    </div>
   );
 };
 

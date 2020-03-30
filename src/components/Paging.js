@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2, 0)
   },
   card: {
-    width: '300px',
+    width: '100%',
     textAlign: 'center'
   }
 }));

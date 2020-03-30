@@ -17,7 +17,11 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-around'
+    justifyContent: 'space-between',
+    '&::after': {
+      content: ' ',
+      flex: 'auto'
+    }
   },
   cols: {
     display: 'flex',
@@ -30,7 +34,7 @@ const BusinessCards = props => {
   const cats = useSelector(state => state.cats);
   const { primary, secondary, tertiary } = cats;
   const [yelpCategories, setYelpCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [businesses, setBusinesses] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
@@ -39,11 +43,19 @@ const BusinessCards = props => {
 
   useEffect(() => {
     if (tertiary !== '') {
-      const yelpCats = categories
+      const tertiaryCategory = categories
         .find(c => c.id === primary)
         .secondary.find(c => c.id === secondary)
-        .tertiary.find(c => c.id === tertiary).yelp;
-      setYelpCategories(yelpCats);
+        .tertiary.find(c => c.id === tertiary);
+      if (tertiaryCategory && tertiaryCategory.yelp) {
+        setYelpCategories(tertiaryCategory.yelp);
+      } else {
+        setYelpCategories([]);
+      }
+      setLoading(true);
+      setBusinesses([]);
+      setTotal(0);
+      setError(false);
     }
   }, [primary, secondary, tertiary]);
 
@@ -161,15 +173,15 @@ const BusinessCards = props => {
               {businesses.map(b => (
                 <Business key={b.id} data={b} />
               ))}
-              {total > 0 && (
-                <Paging
-                  onPrevious={previousPageHandler}
-                  onNext={nextPageHandler}
-                  page={page}
-                  total={total}
-                />
-              )}
             </div>
+            {total > 0 && (
+              <Paging
+                onPrevious={previousPageHandler}
+                onNext={nextPageHandler}
+                page={page}
+                total={total}
+              />
+            )}
           </div>
         </>
       )}

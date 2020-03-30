@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 300,
-    margin: theme.spacing(2, 0)
+    margin: theme.spacing(2, 1)
   },
   media: {
     width: 300,
@@ -40,7 +40,12 @@ const HomeCard = props => {
             />
           )}
           <CardContent>
-            <Typography variant='h6' align='center' color='primary'>
+            <Typography
+              variant='button'
+              display='block'
+              align='center'
+              color='primary'
+            >
               {title.toUpperCase()}
             </Typography>
           </CardContent>

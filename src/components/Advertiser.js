@@ -11,12 +11,13 @@ import LinkIcon from '@material-ui/icons/Link';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    width: '100%',
+    marginBottom: theme.spacing(2)
   },
   card: {
     display: 'flex',
-    justifyContent: 'flex-start',
-    padding: theme.spacing(2),
+    justifyContent: 'space-between',
+    padding: theme.spacing(1, 2),
     borderRadius: 6
   },
   media: {
@@ -26,10 +27,19 @@ const useStyles = makeStyles(theme => ({
   },
   row: {
     display: 'flex',
+    flexDirection: 'row'
+  },
+  info: {
+    padding: theme.spacing(0, 2)
+  },
+  links: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  link: {
+    display: 'flex',
     flexDirection: 'row',
-    '& > *': {
-      padding: theme.spacing(0, 2)
-    }
+    alignItems: 'center'
   }
 }));
 
@@ -49,7 +59,7 @@ const Advertiser = props => {
             {props.title}
           </Typography>
           <div className={classes.row}>
-            <div>
+            <div className={classes.info}>
               {props.address && props.address.length > 0 && (
                 <>
                   {props.address.map(line => (
@@ -65,24 +75,26 @@ const Advertiser = props => {
                 </Typography>
               )}
             </div>
-            <div>
+            <div className={classes.col}>
               {props.website && (
-                <Typography key={props.website} variant='body1'>
-                  <Link href={props.website}>
-                    <LanguageIcon /> {props.website}
-                  </Link>
-                </Typography>
+                <div>
+                  <Typography key={props.website} variant='body1'>
+                    <Link href={props.website} className={classes.link}>
+                      <LanguageIcon /> {props.website}
+                    </Link>
+                  </Typography>
+                </div>
               )}
               {props.articles && props.articles.length > 0 && (
-                <>
+                <div>
                   {props.articles.map(article => (
                     <Typography key={article} variant='body1'>
-                      <Link href={article}>
+                      <Link href={article} className={classes.link}>
                         <LinkIcon /> 3W Article
                       </Link>
                     </Typography>
                   ))}
-                </>
+                </div>
               )}
             </div>
           </div>
