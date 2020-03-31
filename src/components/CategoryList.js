@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -47,37 +47,36 @@ const useStyles = makeStyles(theme => ({
 const CategoryList = ({ title, categories, sticky, selected, path }) => {
   const classes = useStyles();
   const history = useHistory();
-  const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    if (sticky) {
-      setExpanded(true);
-    }
-  }, [sticky]);
+  const [expanded, setExpanded] = useState(sticky);
 
   return (
-    <ExpansionPanel className={classes.root} onClick={() => setExpanded(true)}>
-      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-        <Typography className={classes.summary}>{title}</Typography>
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        {expanded && (
-          <List component='div' aria-labelledby='nested-list-subheader'>
-            {categories.map(cat => (
-              <ListItem
-                button
-                key={cat.id}
-                selected={cat.id === selected}
-                onClick={() => history.push(`${path}/${cat.id}`)}
-                className={classes.item}
-              >
-                <ListItemText primary={cat.title} />
-              </ListItem>
-            ))}
-          </List>
-        )}
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
+    <div className={classes.root}>
+      <ExpansionPanel expanded={expanded}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          onClick={() => setExpanded(!expanded)}
+        >
+          <Typography className={classes.summary}>{title}</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          {expanded && (
+            <List component='div' aria-labelledby='nested-list-subheader'>
+              {categories.map(cat => (
+                <ListItem
+                  button
+                  key={cat.id}
+                  selected={cat.id === selected}
+                  onClick={() => history.push(`${path}/${cat.id}`)}
+                  className={classes.item}
+                >
+                  <ListItemText primary={cat.title} />
+                </ListItem>
+              ))}
+            </List>
+          )}
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+    </div>
   );
 };
 

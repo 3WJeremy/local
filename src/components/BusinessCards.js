@@ -26,6 +26,11 @@ const useStyles = makeStyles(theme => ({
   cols: {
     display: 'flex',
     flexDirection: 'column'
+  },
+  loading: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 }));
 
@@ -167,7 +172,11 @@ const BusinessCards = props => {
               {error.message}
             </Typography>
           )}
-          {loading && <CircularProgress />}
+          {loading && (
+            <div className={classes.loading}>
+              <CircularProgress />
+            </div>
+          )}
           <div className={classes.cols}>
             <div className={classes.root}>
               {businesses.map(b => (
