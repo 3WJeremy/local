@@ -54,7 +54,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/aging-with-power-myles-mcnamara-comfort-keepers-in-home-care-help-seniors-stay-home/'
     ],
-    categories: ['homehealthcare', 'seniorcenters']
+    categories: ['homehealthcare', 'seniorcenters', 'eldercareplanning']
   },
   {
     id: 'myshoesjourney',
@@ -144,14 +144,14 @@ const advertisers = [
     categories: ['lifeinsurance']
   },
   {
-    id: 'riglergroupatalexbrownraymondjamescollinrigler',
-    title: 'Rigler Group at Alex Brown | Raymod James, Collin Rigler',
-    logo: 'rbc-wealth-management.png',
-    address: ['2361 Rosecrans Avenue, Suite 460', 'El Segundo, CA 90245'],
-    phone: '(310) 647-8041',
-    email: 'collin.rigler@rbc.com',
+    id: 'advisorygroupwestbobdonaldson',
+    title: 'Advisory Group West, Bob Donaldson',
+    logo: 'advisory-group-west.png',
+    address: ['330 N. Brand Blvd., Ste. 910', 'Glendale, CA 91203'],
+    phone: '(818) 241-9061',
+    website: 'http://www.advisorygroupwest.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-2/collin-rigler-wealth-manager-with-a-competitive-advantage/'
+      'https://wealthwisdomwellness.us/issue-2/want-to-create-financial-fitness-for-life/'
     ],
     categories: ['financialservices', 'financialadvising']
   },
@@ -244,7 +244,12 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-1/building-lasting-family-wealth/'
     ],
-    categories: ['estateplanning', 'willstrustsprobates', 'taxlaw']
+    categories: [
+      'estateplanning',
+      'willstrustsprobates',
+      'taxlaw',
+      'eldercareplanning'
+    ]
   }
 ];
 
