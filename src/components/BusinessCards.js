@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
@@ -37,13 +38,13 @@ const useStyles = makeStyles(theme => ({
 const BusinessCards = props => {
   const classes = useStyles();
   const cats = useSelector(state => state.cats);
-  const { primary, secondary, tertiary } = cats;
+  const { primary, secondary, tertiary, page } = cats;
+  const history = useHistory();
   const [yelpCategories, setYelpCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   const [businesses, setBusinesses] = useState([]);
   const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(1);
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(-1);
   const [error, setError] = useState({});
 
   useEffect(() => {
@@ -106,6 +107,7 @@ const BusinessCards = props => {
           if (!unmounted) {
             const { total, businesses } = result.data;
             if (businesses.length > 0) {
+              // console.log(`${yelpCategories.join('|')}: ${businesses.length}`);
               setTotal(total);
               setBusinesses(businesses);
               setLoading(false);
@@ -117,6 +119,11 @@ const BusinessCards = props => {
                 setError({ message: 'No businesses available.' });
                 setLoading(false);
               } else {
+                // console.log(
+                //   `${yelpCategories.join(
+                //     '|'
+                //   )}: Failed Santa Clarita, searching by distance...`
+                // );
                 getBusinesses(true);
               }
             }
@@ -132,7 +139,7 @@ const BusinessCards = props => {
         });
     };
 
-    if (yelpCategories.length > 0) {
+    if (yelpCategories.length > 0 && offset > -1) {
       getBusinesses();
     }
 
@@ -144,22 +151,25 @@ const BusinessCards = props => {
 
   useEffect(() => {
     if (page > 0) {
-      setOffset(settings.resultsPerPage * page);
+      // Page - 1 because first page no offset
+      setOffset(settings.resultsPerPage * (page - 1));
     }
   }, [page]);
 
   const previousPageHandler = () => {
-    if (page > 1) {
-      setPage(page - 1);
+    if (page > 2) {
+      const pageNumber = parseInt(page) - 1;
+      history.push(`/${primary}/${secondary}/${tertiary}/${pageNumber}`);
+    } else if (page === 2) {
+      history.push(`/${primary}/${secondary}/${tertiary}`);
     }
   };
 
   const nextPageHandler = () => {
-    if (
-      settings.resultsPerPage * (page + 1) <
-      total + settings.resultsPerPage - 1
-    ) {
-      setPage(page + 1);
+    console.log('nextPageHandler()');
+    if (page * settings.resultsPerPage < total) {
+      const pageNumber = parseInt(page) + 1;
+      history.push(`/${primary}/${secondary}/${tertiary}/${pageNumber}`);
     }
   };
 
@@ -183,7 +193,9 @@ const BusinessCards = props => {
                 <Business key={b.id} data={b} />
               ))}
             </div>
-            {total > 0 && (
+            {(page > 1 ||
+              (page === 1 &&
+                businesses.length === settings.resultsPerPage)) && (
               <Paging
                 onPrevious={previousPageHandler}
                 onNext={nextPageHandler}

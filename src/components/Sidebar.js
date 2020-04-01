@@ -41,7 +41,7 @@ const Sidebar = props => {
       setDisplay(false);
       setTimeout(() => {
         setDisplay(true);
-      }, 500);
+      }, 100);
     };
     forceRefresh();
   }, [secondary]);

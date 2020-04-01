@@ -23,6 +23,8 @@ const useStyles = makeStyles(theme => ({
 
 const Paging = props => {
   const classes = useStyles();
+  const isNextDisabled =
+    props.page * settings.resultsPerPage >= props.total ? true : false;
 
   return (
     <div className={classes.root}>
@@ -30,20 +32,15 @@ const Paging = props => {
         <CardContent>
           <Button
             key='backButton'
-            onClick={props.onPrevious}
+            onClick={() => props.onPrevious()}
             disabled={props.page === 1 ? true : false}
           >
             <ArrowBackIosIcon /> Previous
           </Button>
           <Button
             key='nextButton'
-            onClick={props.onNext}
-            disabled={
-              props.page * settings.resultsPerPage <
-              props.total + settings.resultsPerPage - 1
-                ? true
-                : false
-            }
+            onClick={() => props.onNext()}
+            disabled={isNextDisabled}
           >
             Next <ArrowForwardIosIcon />
           </Button>

@@ -13,8 +13,8 @@ const Paths = props => {
   const { pathname } = location;
 
   useEffect(() => {
-    const setPaths = (p = '', s = '', t = '') => {
-      dispatch(catActions.updatePaths(p, s, t));
+    const setPaths = (p = '', s = '', t = '', page = 1) => {
+      dispatch(catActions.updatePaths(p, s, t, page));
     };
 
     if (pathname === '') {
@@ -22,7 +22,9 @@ const Paths = props => {
     } else {
       const path = pathname.replace(settings.prependPath, '');
       const paths = path.split('/').filter(path => path !== '');
-      if (paths.length === 3) {
+      if (paths.length === 4) {
+        setPaths(paths[0], paths[1], paths[2], paths[3]);
+      } else if (paths.length === 3) {
         setPaths(paths[0], paths[1], paths[2]);
       } else if (paths.length === 2) {
         const firstChildId = categories
