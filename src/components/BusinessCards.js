@@ -157,18 +157,20 @@ const BusinessCards = props => {
   }, [page]);
 
   const previousPageHandler = () => {
-    if (page > 2) {
-      const pageNumber = parseInt(page) - 1;
+    const pageInt = parseInt(page);
+    if (pageInt > 2) {
+      const pageNumber = pageInt - 1;
       history.push(`/${primary}/${secondary}/${tertiary}/${pageNumber}`);
-    } else if (page === 2) {
+    } else if (pageInt === 2) {
       history.push(`/${primary}/${secondary}/${tertiary}`);
     }
   };
 
   const nextPageHandler = () => {
-    console.log('nextPageHandler()');
-    if (page * settings.resultsPerPage < total) {
-      const pageNumber = parseInt(page) + 1;
+    const pageInt = parseInt(page);
+    const totalInt = parseInt(total);
+    if (pageInt * settings.resultsPerPage < totalInt) {
+      const pageNumber = pageInt + 1;
       history.push(`/${primary}/${secondary}/${tertiary}/${pageNumber}`);
     }
   };
