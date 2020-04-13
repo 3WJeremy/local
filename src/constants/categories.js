@@ -14,14 +14,14 @@ const categories = [
           {
             id: 'realestateloans',
             title: 'Real Estate Loans',
-            yelp: ['titleloans', 'mortgagelenders']
+            yelp: ['titleloans', 'mortgagelenders'],
           },
           {
             id: 'businessfinancing',
             title: 'Business / Personal Loans',
-            yelp: ['businessfinancing']
-          }
-        ]
+            yelp: ['businessfinancing'],
+          },
+        ],
       },
       {
         id: 'retirement',
@@ -31,24 +31,24 @@ const categories = [
           {
             id: 'eldercareplanning',
             title: 'Retirement Services',
-            yelp: ['eldercareplanning']
+            yelp: ['eldercareplanning'],
           },
           {
             id: 'lifeinsurance',
             title: 'Life Insurance',
-            yelp: ['lifeinsurance']
+            yelp: ['lifeinsurance'],
           },
           {
             id: 'healthinsurance',
             title: 'Health Insurance',
-            yelp: ['healthinsurance']
+            yelp: ['healthinsurance'],
           },
           {
             id: 'homeinsurance',
             title: 'Home Insurance',
-            yelp: ['homeinsurance']
-          }
-        ]
+            yelp: ['homeinsurance'],
+          },
+        ],
       },
       {
         id: 'investing',
@@ -58,25 +58,25 @@ const categories = [
           {
             id: 'investing',
             title: 'Investing',
-            yelp: ['investing']
+            yelp: ['investing'],
           },
           {
             id: 'financialadvising',
             title: 'Financial Advising',
-            yelp: ['financialadvising']
+            yelp: ['financialadvising'],
           },
           {
             id: 'estateplanning',
             title: 'Estate Planning Attorneys',
-            yelp: ['estateplanning']
+            yelp: ['estateplanning'],
           },
-          { id: 'stockbrokers', title: 'Stock Brokers', yelp: ['investing'] },
+          // { id: 'stockbrokers', title: 'Stock Brokers', yelp: ['investing'] },
           {
             id: 'wealthmanagers',
             title: 'Wealth Managers',
-            yelp: ['financialadvising']
-          }
-        ]
+            yelp: ['financialadvising'],
+          },
+        ],
       },
       {
         id: 'services',
@@ -85,8 +85,8 @@ const categories = [
         tertiary: [
           { id: 'accountants', title: 'Accountants', yelp: ['accountants'] },
           { id: 'notaries', title: 'Notary', yelp: ['notaries'] },
-          { id: 'payroll', title: 'Payroll Services', yelp: ['payroll'] }
-        ]
+          { id: 'payroll', title: 'Payroll Services', yelp: ['payroll'] },
+        ],
       },
       {
         id: 'home',
@@ -97,113 +97,113 @@ const categories = [
           {
             id: 'homeappliancerepair',
             title: 'Appliances & Repair',
-            yelp: ['homeappliancerepair']
+            yelp: ['homeappliancerepair'],
           },
           {
             id: 'carpet_cleaning',
             title: 'Carpet Cleaning',
-            yelp: ['carpet_cleaning']
+            yelp: ['carpet_cleaning'],
           },
           {
             id: 'masonry_concrete',
             title: 'Concrete',
-            yelp: ['masonry_concrete']
+            yelp: ['masonry_concrete'],
           },
           {
             id: 'contractors',
             title: 'Home General Contractors',
-            yelp: ['contractors']
+            yelp: ['contractors'],
           },
           {
             id: 'electricians',
             title: 'Electricians',
-            yelp: ['electricians']
+            yelp: ['electricians'],
           },
           {
             id: 'electronicsrepair',
             title: 'Electronics Repair',
-            yelp: ['electronicsrepair']
+            yelp: ['electronicsrepair'],
           },
           { id: 'flooring', title: 'Flooring', yelp: ['flooring'] },
           {
             id: 'garage_door_services',
             title: 'Garage Door Services',
-            yelp: ['garage_door_services']
+            yelp: ['garage_door_services'],
           },
           {
             id: 'kitchenandbath',
             title: 'Kitchen & Bath Remodel',
-            yelp: ['kitchenandbath']
+            yelp: ['kitchenandbath'],
           },
-          {
-            id: 'kitchensupplies',
-            title: 'Kitchen Accessories',
-            yelp: ['kitchensupplies']
-          },
+          // {
+          //   id: 'kitchensupplies',
+          //   title: 'Kitchen Accessories',
+          //   yelp: ['kitchensupplies']
+          // },
           {
             id: 'interiordesign',
             title: 'Home Decor / Interior Design',
-            yelp: ['interiordesign']
+            yelp: ['interiordesign'],
           },
           {
             id: 'home_inspectors',
             title: 'Home Inspectors',
-            yelp: ['home_inspectors']
+            yelp: ['home_inspectors'],
           },
           {
             id: 'securitysystems',
             title: 'Security Systems',
-            yelp: ['securitysystems']
+            yelp: ['securitysystems'],
           },
           {
             id: 'airductcleaning',
             title: 'Duct Cleaning',
-            yelp: ['airductcleaning']
+            yelp: ['airductcleaning'],
           },
           {
             id: 'solarinstallation',
             title: 'Solar Installation',
-            yelp: ['solarinstallation']
+            yelp: ['solarinstallation'],
           },
           { id: 'roofing', title: 'Roofing', yelp: ['roofing'] },
           {
             id: 'windowsinstallation',
             title: 'Windows Installation',
-            yelp: ['windowsinstallation']
+            yelp: ['windowsinstallation'],
           },
           {
             id: 'landscaping',
             title: 'Lawn & Garden',
-            yelp: ['landscaping', 'lawnservices', 'gardening']
+            yelp: ['landscaping', 'lawnservices', 'gardening'],
           },
           { id: 'lighting', title: 'Lighting Fixtures', yelp: ['lighting'] },
           {
             id: 'outdoorlighting',
             title: 'Outdoor Lighting',
-            yelp: ['lighting']
+            yelp: ['lighting'],
           },
           {
             id: 'pest_control',
             title: 'Pest Control',
-            yelp: ['pest_control']
+            yelp: ['pest_control'],
           },
           { id: 'plumbing', title: 'Plumbing', yelp: ['plumbing'] },
           {
             id: 'poolservice',
             title: 'Swimming Pool Contractor',
-            yelp: ['poolservice']
+            yelp: ['poolservice'],
           },
           {
             id: 'poolcleaners',
             title: 'Pool Cleaners',
-            yelp: ['poolcleaners']
+            yelp: ['poolcleaners'],
           },
           {
             id: 'treeservices',
             title: 'Tree Services',
-            yelp: ['treeservices']
-          }
-        ]
+            yelp: ['treeservices'],
+          },
+        ],
       },
       {
         id: 'auto',
@@ -216,33 +216,33 @@ const categories = [
           {
             id: 'truckdealers',
             title: 'Truck Dealers',
-            yelp: ['truckdealers']
+            yelp: ['truckdealers'],
           },
           {
             id: 'usedcardealers',
             title: 'Used Cars',
-            yelp: ['usedcardealers']
+            yelp: ['usedcardealers'],
           },
           {
             id: 'usedtruckdealers',
             title: 'Used Trucks',
-            yelp: ['usedcardealers']
+            yelp: ['usedcardealers'],
           },
           { id: 'autobody', title: 'Auto Body', yelp: ['bodyshops'] },
           { id: 'oillube', title: 'Auto Oil & Lube', yelp: ['oilchange'] },
           {
             id: 'autopartssupplies',
             title: 'Auto Parts',
-            yelp: ['autopartssupplies']
+            yelp: ['autopartssupplies'],
           },
           { id: 'autorepair', title: 'Auto Repair', yelp: ['autorepair'] },
           { id: 'bodyshops', title: 'Body Shop', yelp: ['bodyshops'] },
           { id: 'brakerepair', title: 'Brake Repair', yelp: ['autorepair'] },
           { id: 'oilchange', title: 'Oil Change', yelp: ['oilchange'] },
-          { id: 'tires', title: 'Tires', yelp: ['tires'] }
-        ]
-      }
-    ]
+          { id: 'tires', title: 'Tires', yelp: ['tires'] },
+        ],
+      },
+    ],
   },
   {
     id: 'wisdom',
@@ -256,34 +256,34 @@ const categories = [
           {
             id: 'collegecounseling',
             title: 'College Counseling',
-            yelp: ['collegecounseling']
+            yelp: ['collegecounseling'],
           },
           {
             id: 'collegeuniv',
             title: 'Colleges & Universities',
-            yelp: ['collegeuniv']
+            yelp: ['collegeuniv'],
           },
           {
             id: 'educationservices',
             title: 'Educational Services',
-            yelp: ['educationservices']
+            yelp: ['educationservices'],
           },
           {
             id: 'religiousschools',
             title: 'Religious Schools',
-            yelp: ['religiousschools']
+            yelp: ['religiousschools'],
           },
           {
             id: 'specialed',
             title: 'Special Education',
-            yelp: ['specialed']
+            yelp: ['specialed'],
           },
           {
             id: 'specialtyschools',
             title: 'Specialty Schools',
-            yelp: ['specialtyschools']
-          }
-        ]
+            yelp: ['specialtyschools'],
+          },
+        ],
       },
       {
         id: 'legal',
@@ -293,82 +293,82 @@ const categories = [
           {
             id: 'bankruptcy',
             title: 'Bankruptcy Attorney',
-            yelp: ['bankruptcy']
+            yelp: ['bankruptcy'],
           },
           {
             id: 'braininjury',
             title: 'Brain Injury Attorney',
-            yelp: ['personal_injury']
+            yelp: ['personal_injury'],
           },
           {
             id: 'businesslawyers',
             title: 'Business Attorney',
-            yelp: ['businesslawyers']
+            yelp: ['businesslawyers'],
           },
           {
             id: 'caraccident',
             title: 'Car Accident Attorney',
-            yelp: ['personal_injury']
+            yelp: ['personal_injury'],
           },
           {
             id: 'childcustody',
             title: 'Child Custody Attorney',
-            yelp: ['divorce']
+            yelp: ['divorce'],
           },
           { id: 'duilawyers', title: 'DUI Attorney', yelp: ['duilawyers'] },
           {
             id: 'employmentlawyers',
             title: 'Employment Attorney',
-            yelp: ['employmentlawyers']
+            yelp: ['employmentlawyers'],
           },
           { id: 'divorce', title: 'Family Attorney', yelp: ['divorce'] },
           {
             id: 'forclosurelawyers',
             title: 'Foreclosure Attorney',
-            yelp: ['realestatelawyers']
+            yelp: ['realestatelawyers'],
           },
           {
             id: 'immigrationlawyers',
             title: 'Immigration Attorney',
-            yelp: ['immigrationlawyers']
+            yelp: ['immigrationlawyers'],
           },
           {
             id: 'general_litigation',
             title: 'Litigation Attorney',
-            yelp: ['general_litigation']
+            yelp: ['general_litigation'],
           },
           {
             id: 'medicallaw',
             title: 'Medical Malpractice Attorney',
-            yelp: ['medicallaw']
+            yelp: ['medicallaw'],
           },
           {
             id: 'motorcycle_injury',
             title: 'Motorcycle Accident Attorney',
-            yelp: ['personal_injury']
+            yelp: ['personal_injury'],
           },
           {
             id: 'personal_injury',
             title: 'Personal Injury Attorney',
-            yelp: ['personal_injury']
+            yelp: ['personal_injury'],
           },
           {
             id: 'realestatelawyers',
             title: 'Real Estate Attorney',
-            yelp: ['realestatelawyers']
+            yelp: ['realestatelawyers'],
           },
           { id: 'taxlaw', title: 'Tax Attorney', yelp: ['taxlaw'] },
           {
             id: 'truckingaccidentlaw',
             title: 'Trucking Accident Attorney',
-            yelp: ['workerscomplaw']
+            yelp: ['workerscomplaw'],
           },
           {
             id: 'workerscomplaw',
             title: 'Workers Compensation Attorney',
-            yelp: ['workerscomplaw']
-          }
-        ]
+            yelp: ['workerscomplaw'],
+          },
+        ],
       },
       {
         id: 'estateplanning',
@@ -378,21 +378,21 @@ const categories = [
           {
             id: 'estateplanningattorney',
             title: 'Estate Planning Attorney',
-            yelp: ['estateplanning']
+            yelp: ['estateplanning'],
           },
           {
             id: 'willstrustsprobates',
             title: 'Probate Attorney',
-            yelp: ['willstrustsprobates']
+            yelp: ['willstrustsprobates'],
           },
           {
             id: 'assetprotection',
             title: 'Asset Protection',
-            yelp: ['estateplanning']
-          }
-        ]
-      }
-    ]
+            yelp: ['estateplanning'],
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'wellness',
@@ -406,17 +406,17 @@ const categories = [
           {
             id: 'audiologist',
             title: 'Audiologist',
-            yelp: ['audiologist', 'hearingaidproviders']
+            yelp: ['audiologist', 'hearingaidproviders'],
           },
           {
             id: 'cosmeticdentists',
             title: 'Cosmetic Dentists',
-            yelp: ['cosmeticdentists']
+            yelp: ['cosmeticdentists'],
           },
           {
             id: 'cosmeticsurgeons',
             title: 'Cosmetic Surgeons',
-            yelp: ['cosmeticsurgeons']
+            yelp: ['cosmeticsurgeons'],
           },
           { id: 'dentists', title: 'Dentists', yelp: ['dentists'] },
           { id: 'oncologist', title: 'Oncologists', yelp: ['oncologist'] },
@@ -424,164 +424,142 @@ const categories = [
           {
             id: 'earnosethroat',
             title: 'Ear Nose & Throat',
-            yelp: ['earnosethroat']
+            yelp: ['earnosethroat'],
           },
-          {
-            id: 'endocrinologists',
-            title: 'Endodontists',
-            yelp: ['endocrinologists']
-          },
+          // {
+          //   id: 'endocrinologists',
+          //   title: 'Endodontists',
+          //   yelp: ['endocrinologists']
+          // },
           { id: 'familydr', title: 'Family Practice', yelp: ['familydr'] },
           {
             id: 'generaldentistry',
             title: 'General Dentistry',
-            yelp: ['generaldentistry']
+            yelp: ['generaldentistry'],
           },
           {
             id: 'hearingaidproviders',
             title: 'Hearing Aid Providers',
-            yelp: ['hearingaidproviders', 'audiologists']
+            yelp: ['hearingaidproviders', 'audiologists'],
           },
           { id: 'naturopathic', title: 'Holistic', yelp: ['naturopathic'] },
           {
             id: 'homehealthcare',
             title: 'Home Health Care',
-            yelp: ['homehealthcare']
+            yelp: ['homehealthcare'],
           },
           { id: 'hospice', title: 'Hospice', yelp: ['hospice'] },
           {
             id: 'massage_therapy',
             title: 'Massage Therapy',
-            yelp: ['massage_therapy']
+            yelp: ['massage_therapy'],
           },
           {
             id: 'medcenters',
             title: 'Medical Centers',
-            yelp: ['medcenters']
+            yelp: ['medcenters'],
           },
           { id: 'neurologist', title: 'Neurologist', yelp: ['neurologist'] },
           {
             id: 'nutritionists',
             title: 'Nutritionists',
-            yelp: ['nutritionists']
+            yelp: ['nutritionists'],
           },
           {
             id: 'occupationaltherapy',
             title: 'Occupational Therapy',
-            yelp: ['occupationaltherapy']
+            yelp: ['occupationaltherapy'],
           },
           {
             id: 'opthamalogists',
             title: 'Ophthalmologists',
-            yelp: ['opthamalogists']
+            yelp: ['opthamalogists'],
           },
           {
             id: 'optometrists',
             title: 'Optometrists',
-            yelp: ['optometrists']
+            yelp: ['optometrists'],
           },
           {
             id: 'oralsurgeons',
             title: 'Oral Surgeons',
-            yelp: ['oralsurgeons']
+            yelp: ['oralsurgeons'],
           },
           {
             id: 'orthopedists',
             title: 'Orthopedists',
-            yelp: ['orthopedists']
+            yelp: ['orthopedists'],
           },
           {
             id: 'pediatric_dentists',
             title: 'Pediatric Dentists',
-            yelp: ['pediatric_dentists']
+            yelp: ['pediatric_dentists'],
           },
           {
             id: 'periodontists',
             title: 'Periodontists',
-            yelp: ['periodontists']
+            yelp: ['periodontists'],
           },
           {
             id: 'physicaltherapy',
             title: 'Physical Therapy',
-            yelp: ['physicaltherapy']
+            yelp: ['physicaltherapy'],
           },
           {
             id: 'rehabilitation_center',
             title: 'Rehabilitation Center',
-            yelp: ['rehabilitation_center']
+            yelp: ['rehabilitation_center'],
           },
           { id: 'sportsmed', title: 'Sports Medicine', yelp: ['sportsmed'] },
           { id: 'urologists', title: 'Urologists', yelp: ['urologists'] },
           {
             id: 'weightlosscenters',
             title: 'Weight Loss Centers',
-            yelp: ['weightlosscenters']
+            yelp: ['weightlosscenters'],
           },
           {
             id: 'plasticsurgeons',
             title: 'Plastic Surgery',
-            yelp: ['plasticsurgeons']
+            yelp: ['plasticsurgeons'],
           },
           {
             id: 'sleepspecialists',
             title: 'Sleep Apnea',
-            yelp: ['sleepspecialists']
-          }
-        ]
+            yelp: ['sleepspecialists'],
+          },
+        ],
       },
       {
         id: 'entertainment',
         title: 'Entertainment',
         image: 'entertainment.png',
         tertiary: [
-          { id: 'gun_ranges', title: 'Gun Ranges', yelp: ['gun_ranges'] },
           { id: 'eventservices', title: 'Events', yelp: ['eventservices'] },
           { id: 'galleries', title: 'Art Galleries', yelp: ['galleries'] },
           { id: 'festivals', title: 'Festivals', yelp: ['festivals'] },
           {
             id: 'jazzandblues',
             title: 'Jazz & Blues',
-            yelp: ['jazzandblues']
+            yelp: ['jazzandblues'],
           },
-          { id: 'artmuseums', title: 'Museums', yelp: ['artmuseums'] },
+          // { id: 'artmuseums', title: 'Museums', yelp: ['artmuseums'] },
           { id: 'opera', title: 'Opera & Ballet', yelp: ['opera'] },
           { id: 'theater', title: 'Performing Arts', yelp: ['theater'] },
           {
             id: 'stadiumsarenas',
             title: 'Stadiums & Arenas',
-            yelp: ['stadiumsarenas']
+            yelp: ['stadiumsarenas'],
           },
           {
             id: 'musicvenues',
             title: 'Bands & Groups',
-            yelp: ['musicvenues']
+            yelp: ['musicvenues'],
           },
           { id: 'bartenders', title: 'Bartenders', yelp: ['bartenders'] },
           { id: 'catering', title: 'Caterers', yelp: ['catering'] },
           { id: 'comedyclubs', title: 'Comedians', yelp: ['comedyclubs'] },
           { id: 'magic', title: 'Magic', yelp: ['magicians'] },
-          { id: 'magicians', title: 'Magicians', yelp: ['magicians'] },
-          {
-            id: 'eventplanning',
-            title: 'Party & Event Planning',
-            yelp: ['eventplanning']
-          },
-          {
-            id: 'partyequipmentrentals',
-            title: 'Party Equipment Rentals',
-            yelp: ['partyequipmentrentals']
-          },
-          {
-            id: 'partysupplies',
-            title: 'Party Supplies',
-            yelp: ['partysupplies']
-          },
-          {
-            id: 'wedding_planning',
-            title: 'Wedding Planning',
-            yelp: ['wedding_planning']
-          }
-        ]
+        ],
       },
       {
         id: 'activities',
@@ -589,53 +567,28 @@ const categories = [
         image: 'activities.png',
         tertiary: [
           { id: 'gun_ranges', title: 'Gun Ranges', yelp: ['gun_ranges'] },
-          { id: 'eventservices', title: 'Events', yelp: ['eventservices'] },
-          { id: 'galleries', title: 'Art Galleries', yelp: ['galleries'] },
-          { id: 'festivals', title: 'Festivals', yelp: ['festivals'] },
-          {
-            id: 'jazzandblues',
-            title: 'Jazz & Blues',
-            yelp: ['jazzandblues']
-          },
-          { id: 'artmuseums', title: 'Museums', yelp: ['artmuseums'] },
-          { id: 'opera', title: 'Opera & Ballet', yelp: ['opera'] },
-          { id: 'theater', title: 'Performing Arts', yelp: ['theater'] },
-          {
-            id: 'stadiumsarenas',
-            title: 'Stadiums & Arenas',
-            yelp: ['stadiumsarenas']
-          },
-          {
-            id: 'musicvenues',
-            title: 'Bands & Groups',
-            yelp: ['musicvenues']
-          },
-          { id: 'bartenders', title: 'Bartenders', yelp: ['bartenders'] },
-          { id: 'catering', title: 'Caterers', yelp: ['catering'] },
-          { id: 'comedyclubs', title: 'Comedians', yelp: ['comedyclubs'] },
-          { id: 'magic', title: 'Magic', yelp: ['magicians'] },
           { id: 'magicians', title: 'Magicians', yelp: ['magicians'] },
           {
             id: 'eventplanning',
             title: 'Party & Event Planning',
-            yelp: ['eventplanning']
+            yelp: ['eventplanning'],
           },
           {
             id: 'partyequipmentrentals',
             title: 'Party Equipment Rentals',
-            yelp: ['partyequipmentrentals']
+            yelp: ['partyequipmentrentals'],
           },
           {
             id: 'partysupplies',
             title: 'Party Supplies',
-            yelp: ['partysupplies']
+            yelp: ['partysupplies'],
           },
           {
             id: 'wedding_planning',
             title: 'Wedding Planning',
-            yelp: ['wedding_planning']
-          }
-        ]
+            yelp: ['wedding_planning'],
+          },
+        ],
       },
       {
         id: 'travel',
@@ -649,15 +602,15 @@ const categories = [
           {
             id: 'travelservices',
             title: 'Travel Services',
-            yelp: ['travelservices']
+            yelp: ['travelservices'],
           },
           {
             id: 'vacation_rentals',
             title: 'Vacation Rentals',
-            yelp: ['vacation_rentals']
+            yelp: ['vacation_rentals'],
           },
-          { id: 'hotels', title: 'Hotel', yelp: ['hotels'] }
-        ]
+          { id: 'hotels', title: 'Hotel', yelp: ['hotels'] },
+        ],
       },
       {
         id: 'pets',
@@ -671,10 +624,10 @@ const categories = [
           {
             id: 'pet_training',
             title: 'Pet Training',
-            yelp: ['pet_training']
+            yelp: ['pet_training'],
           },
-          { id: 'vet', title: 'Veterinarians', yelp: ['vet'] }
-        ]
+          { id: 'vet', title: 'Veterinarians', yelp: ['vet'] },
+        ],
       },
       {
         id: 'beauty',
@@ -684,18 +637,18 @@ const categories = [
           { id: 'medicalspa', title: 'Medical Spas', yelp: ['medicalspa'] },
           { id: 'skincare', title: 'Skin Care', yelp: ['skincare'] },
           { id: 'hairloss', title: 'Hair Restoration', yelp: ['hairloss'] },
-          {
-            id: 'cosmeticskin',
-            title: 'Cosmetic Skin Treatments',
-            yelp: ['estheticians']
-          },
-          {
-            id: 'estheticians',
-            title: 'Skin tightening and lifting',
-            yelp: ['estheticians']
-          }
-        ]
-      }
+          // {
+          //   id: 'cosmeticskin',
+          //   title: 'Cosmetic Skin Treatments',
+          //   yelp: ['estheticians'],
+          // },
+          // {
+          //   id: 'estheticians',
+          //   title: 'Skin tightening and lifting',
+          //   yelp: ['estheticians'],
+          // },
+        ],
+      },
       // {
       //   id: 'general',
       //   title: 'General Products',
@@ -762,8 +715,8 @@ const categories = [
       //     { id: 'shopping', title: 'Online Shopping', yelp: ['shopping'] }
       //   ]
       // }
-    ]
-  }
+    ],
+  },
 ];
 
 export default categories;
