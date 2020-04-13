@@ -12,7 +12,7 @@ import Paging from './Paging';
 import categories from '../constants/categories';
 import settings from '../constants/settings';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     // width: '100%',
     display: 'flex',
@@ -21,23 +21,23 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     '&::after': {
       content: ' ',
-      flex: 'auto'
-    }
+      flex: 'auto',
+    },
   },
   cols: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   loading: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 }));
 
-const BusinessCards = props => {
+const BusinessCards = (props) => {
   const classes = useStyles();
-  const cats = useSelector(state => state.cats);
+  const cats = useSelector((state) => state.cats);
   const { primary, secondary, tertiary, page } = cats;
   const history = useHistory();
   const [yelpCategories, setYelpCategories] = useState([]);
@@ -46,17 +46,20 @@ const BusinessCards = props => {
   const [total, setTotal] = useState(0);
   const [offset, setOffset] = useState(-1);
   const [error, setError] = useState({});
+  const [term, setTerm] = useState('');
 
   useEffect(() => {
     if (tertiary !== '') {
       const tertiaryCategory = categories
-        .find(c => c.id === primary)
-        .secondary.find(c => c.id === secondary)
-        .tertiary.find(c => c.id === tertiary);
+        .find((c) => c.id === primary)
+        .secondary.find((c) => c.id === secondary)
+        .tertiary.find((c) => c.id === tertiary);
       if (tertiaryCategory && tertiaryCategory.yelp) {
         setYelpCategories(tertiaryCategory.yelp);
+        setTerm(tertiaryCategory.title);
       } else {
         setYelpCategories([]);
+        setTerm('');
       }
       setLoading(true);
       setBusinesses([]);
@@ -69,29 +72,6 @@ const BusinessCards = props => {
     let unmounted = false;
     let source = axios.CancelToken.source();
 
-    const getParams = (byDistance = false) => {
-      let params = {
-        categories: yelpCategories.join(','),
-        locale: 'en_US',
-        limit: settings.resultsPerPage,
-        offset: offset
-      };
-      if (byDistance) {
-        return {
-          ...params,
-          latitude: settings.latitude,
-          longitude: settings.longitude,
-          radius: settings.radius,
-          sort_by: 'distance'
-        };
-      }
-      return {
-        ...params,
-        location: settings.location,
-        sort_by: 'distance'
-      };
-    };
-
     const getBusinesses = async (byDistance = false) => {
       const proxyUrl = settings.proxy + settings.yelpSearchUrl;
 
@@ -99,37 +79,37 @@ const BusinessCards = props => {
         .get(proxyUrl, {
           cancelToken: source.token,
           headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
+            Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`,
           },
-          params: getParams(byDistance)
+          params: {
+            term: term,
+            latitude: settings.latitude,
+            longitude: settings.longitude,
+            radius: settings.radius,
+            categories: yelpCategories.join(','),
+            locale: 'en_US',
+            limit: settings.resultsPerPage,
+            offset: offset,
+            sort_by: 'distance',
+          },
         })
-        .then(result => {
+        .then((result) => {
           if (!unmounted) {
             const { total, businesses } = result.data;
             if (businesses.length > 0) {
-              // console.log(`${yelpCategories.join('|')}: ${businesses.length}`);
               setTotal(total);
               setBusinesses(businesses);
               setLoading(false);
               setError(false);
             } else {
-              if (byDistance) {
-                setTotal(0);
-                setBusinesses([]);
-                setError({ message: 'No businesses available.' });
-                setLoading(false);
-              } else {
-                // console.log(
-                //   `${yelpCategories.join(
-                //     '|'
-                //   )}: Failed Santa Clarita, searching by distance...`
-                // );
-                getBusinesses(true);
-              }
+              setTotal(0);
+              setBusinesses([]);
+              setError({ message: 'No businesses available.' });
+              setLoading(false);
             }
           }
         })
-        .catch(err => {
+        .catch((err) => {
           if (!unmounted) {
             setTotal(0);
             setBusinesses([]);
@@ -147,11 +127,11 @@ const BusinessCards = props => {
       unmounted = true;
       source.cancel('Canceling in cleanup');
     };
-  }, [yelpCategories, offset]);
+  }, [yelpCategories, term, offset]);
 
   useEffect(() => {
     if (page > 0) {
-      // Page - 1 because first page no offset
+      // (page - 1) because first page doesn't have an offset
       setOffset(settings.resultsPerPage * (page - 1));
     }
   }, [page]);
@@ -191,7 +171,7 @@ const BusinessCards = props => {
           )}
           <div className={classes.cols}>
             <div className={classes.root}>
-              {businesses.map(b => (
+              {businesses.map((b) => (
                 <Business key={b.id} data={b} />
               ))}
             </div>

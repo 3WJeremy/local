@@ -7,17 +7,17 @@ const advertisers = [
     phone: '(661) 291-1200',
     website: 'https://baywooddentalgroup.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-4/dr-sepi-fatahi-valencia-dentist-lives-a-childhood-dream/'
+      'https://wealthwisdomwellness.us/issue-4/dr-sepi-fatahi-valencia-dentist-lives-a-childhood-dream/',
     ],
-    categories: [
+    yelp: [
       'cosmeticdentists',
       'dentists',
       'generaldentistry',
       'oralsurgeons',
       'orthopedists',
       'pediatric_dentists',
-      'periodontists'
-    ]
+      'periodontists',
+    ],
   },
   {
     id: 'millenniumdental',
@@ -28,20 +28,20 @@ const advertisers = [
       'Sherman Oaks, CA 91403',
       '',
       '414 N. Camden Drive #1240',
-      'Beverly Hils, CA 90210'
+      'Beverly Hils, CA 90210',
     ],
     phone: '(818) 574-5100 (310) 734-8525',
     website: 'http://millenniumdental.net',
     articles: ['https://wealthwisdomwellness.us/issue-2/dr-eddie-siman/'],
-    categories: [
+    yelp: [
       'cosmeticdentists',
       'dentists',
       'generaldentistry',
       'oralsurgeons',
       'orthopedists',
       'pediatric_dentists',
-      'periodontists'
-    ]
+      'periodontists',
+    ],
   },
   {
     id: 'comfortkeepers',
@@ -52,9 +52,9 @@ const advertisers = [
     website: 'http://www.comfortkeepers.com/',
     email: 'myles@comfortkeepers.com',
     articles: [
-      'https://wealthwisdomwellness.us/issue-4/aging-with-power-myles-mcnamara-comfort-keepers-in-home-care-help-seniors-stay-home/'
+      'https://wealthwisdomwellness.us/issue-4/aging-with-power-myles-mcnamara-comfort-keepers-in-home-care-help-seniors-stay-home/',
     ],
-    categories: ['homehealthcare', 'seniorcenters', 'eldercareplanning']
+    yelp: ['homehealthcare', 'seniorcenters', 'eldercareplanning'],
   },
   {
     id: 'myshoesjourney',
@@ -63,9 +63,9 @@ const advertisers = [
     phone: '(661) 714-3193',
     website: 'http://www.myshoesmyjourney.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-4/life-coach-marguerite-berg-for-each-person-in-life-its-my-shoes-my-journey/'
+      'https://wealthwisdomwellness.us/issue-4/life-coach-marguerite-berg-for-each-person-in-life-its-my-shoes-my-journey/',
     ],
-    categories: ['lifecoach']
+    yelp: ['lifecoach'],
   },
   {
     id: 'scvadvancedaudiology',
@@ -75,9 +75,9 @@ const advertisers = [
     phone: '(661) 253-EARS (3277)',
     website: 'https://scvadvancedaudiology.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-4/all-in-the-family-nola-aronson-advanced-audiology-help-the-peeples-hear-better/'
+      'https://wealthwisdomwellness.us/issue-4/all-in-the-family-nola-aronson-advanced-audiology-help-the-peeples-hear-better/',
     ],
-    categories: ['audiologist', 'hearingaidproviders']
+    yelp: ['audiologist', 'hearingaidproviders'],
   },
   {
     id: 'audiologyassociates',
@@ -87,7 +87,7 @@ const advertisers = [
     phone: '(661) 284-1900',
     website: 'https://www.audiologyassociates.net/',
     articles: ['https://wealthwisdomwellness.us/issue-2/can-you-hear-me-now/'],
-    categories: ['audiologist', 'hearingaidproviders']
+    yelp: ['audiologist', 'hearingaidproviders'],
   },
   {
     id: 'tyrabeaversintegratedhealth',
@@ -97,9 +97,9 @@ const advertisers = [
     phone: '(310) 859-7696',
     website: 'https://tyrabeaversdc.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-3/health-coach-brings-hipness-to-his-healing-practice/'
+      'https://wealthwisdomwellness.us/issue-3/health-coach-brings-hipness-to-his-healing-practice/',
     ],
-    categories: ['chiropractors']
+    yelp: ['chiropractors'],
   },
   {
     id: 'helmvisiongroup',
@@ -109,15 +109,15 @@ const advertisers = [
     phone: '(661) 259-3937',
     website: 'http://www.helmvisiongroup.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-4/dr-craig-j-helm-takes-a-closer-look-at-summer-eye-injuries/'
+      'https://wealthwisdomwellness.us/issue-4/dr-craig-j-helm-takes-a-closer-look-at-summer-eye-injuries/',
     ],
-    categories: [
+    yelp: [
       'physicians',
       'opthamologists',
       'retinaspecialists',
       'optometrists',
-      'laserlasikeyes'
-    ]
+      'laserlasikeyes',
+    ],
   },
   {
     id: 'investorsbusinessdailyamysmith',
@@ -126,9 +126,9 @@ const advertisers = [
     website: 'https://www.investors.com/stocksuccessbook',
     email: 'amy.smith@investors.com',
     articles: [
-      'https://wealthwisdomwellness.us/issue-4/beyond-fang-ibds-amy-smith-spotlights-four-high-performing-stocks/'
+      'https://wealthwisdomwellness.us/issue-4/beyond-fang-ibds-amy-smith-spotlights-four-high-performing-stocks/',
     ],
-    categories: ['investing']
+    yelp: ['investing'],
   },
   {
     id: 'totalfinancialsolutions',
@@ -139,9 +139,9 @@ const advertisers = [
     website: 'http://tfswealth.com',
     email: 'info@tfswealth.com',
     articles: [
-      'https://wealthwisdomwellness.us/issue-2/you-can-retire-in-style-without-paying-fees-or-losing-your-principal/'
+      'https://wealthwisdomwellness.us/issue-2/you-can-retire-in-style-without-paying-fees-or-losing-your-principal/',
     ],
-    categories: ['lifeinsurance']
+    yelp: ['lifeinsurance'],
   },
   {
     id: 'advisorygroupwestbobdonaldson',
@@ -151,21 +151,9 @@ const advertisers = [
     phone: '(818) 241-9061',
     website: 'http://www.advisorygroupwest.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-2/want-to-create-financial-fitness-for-life/'
+      'https://wealthwisdomwellness.us/issue-2/want-to-create-financial-fitness-for-life/',
     ],
-    categories: ['financialservices', 'financialadvising']
-  },
-  {
-    id: 'advisorygroupwestbobdonaldson',
-    title: 'Advisory Group West, Bob Donaldson',
-    logo: 'advisory-group-west.png',
-    address: ['330 N. Brand Blvd., Ste. 910', 'Glendale, CA 91203'],
-    phone: '(818) 241-9061',
-    website: 'http://www.advisorygroupwest.com/',
-    articles: [
-      'https://wealthwisdomwellness.us/issue-2/want-to-create-financial-fitness-for-life/'
-    ],
-    categories: ['financialservices', 'financialadvising']
+    yelp: ['financialservices', 'financialadvising'],
   },
   {
     id: 'wellsfargoadvisorfredwachtel',
@@ -174,9 +162,9 @@ const advertisers = [
     address: ['24180 Lyons Avenue', 'Newhall, CA 91321'],
     phone: '(310) 502-2752',
     articles: [
-      'https://wealthwisdomwellness.us/issue-3/fred-wachtel-helps-families/'
+      'https://wealthwisdomwellness.us/issue-3/fred-wachtel-helps-families/',
     ],
-    categories: ['financialservices', 'financialadvising']
+    yelp: ['financialservices', 'financialadvising'],
   },
   {
     id: 'theofficeofjorgeperazzo',
@@ -186,9 +174,9 @@ const advertisers = [
     phone: '(661) 481-2219',
     website: 'https://www.jorgeperazzo.com/',
     articles: [
-      'https://wealthwisdomwellness.us/issue-3/family-flying-and-federer/'
+      'https://wealthwisdomwellness.us/issue-3/family-flying-and-federer/',
     ],
-    categories: ['taxservices']
+    yelp: ['taxservices'],
   },
   {
     id: 'compassrealestatejeffbrandolino',
@@ -198,16 +186,16 @@ const advertisers = [
     website: 'https://brandolinogroup.com/',
     email: 'jeff@brandolinogroup.com',
     articles: [
-      'https://wealthwisdomwellness.us/issue-3/jeff-brandolino-on-building-a-brand/'
+      'https://wealthwisdomwellness.us/issue-3/jeff-brandolino-on-building-a-brand/',
     ],
-    categories: [
+    yelp: [
       'commercialrealestate',
       'mortgagebrokers',
       'propertymgmt',
       'realestateagents',
       'apartmentagents',
-      'realestatesvcs'
-    ]
+      'realestatesvcs',
+    ],
   },
   {
     id: 'progressiveinsulationandwindows',
@@ -218,9 +206,9 @@ const advertisers = [
     website: 'http://www.progressiveiw.com/',
     email: 'sales@proiw.com',
     articles: [
-      'https://wealthwisdomwellness.us/issue-1/progressive-insulation-windows/'
+      'https://wealthwisdomwellness.us/issue-1/progressive-insulation-windows/',
     ],
-    categories: ['insulationinstallation', 'windowsinstallation']
+    yelp: ['insulationinstallation', 'windowsinstallation'],
   },
   {
     id: 'ecolatermiteandpestcontrolsuefries',
@@ -229,9 +217,9 @@ const advertisers = [
     address: ['15314 Devonshire Street', 'Mission Hills, CA 91345'],
     phone: '(818) 920-7301',
     articles: [
-      'https://wealthwisdomwellness.us/issue-1/as-gentle-as-a-butterfly/'
+      'https://wealthwisdomwellness.us/issue-1/as-gentle-as-a-butterfly/',
     ],
-    categories: ['pest_control']
+    yelp: ['pest_control'],
   },
   {
     id: 'vanessaterzian',
@@ -242,15 +230,15 @@ const advertisers = [
     website: 'http://vterzianlaw.com/',
     email: 'vanessa@vterzianlaw.com',
     articles: [
-      'https://wealthwisdomwellness.us/issue-1/building-lasting-family-wealth/'
+      'https://wealthwisdomwellness.us/issue-1/building-lasting-family-wealth/',
     ],
-    categories: [
+    yelp: [
       'estateplanning',
       'willstrustsprobates',
       'taxlaw',
-      'eldercareplanning'
-    ]
-  }
+      'eldercareplanning',
+    ],
+  },
 ];
 
 export default advertisers;

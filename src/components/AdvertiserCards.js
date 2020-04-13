@@ -6,16 +6,16 @@ import Advertiser from './Advertiser';
 import advertisers from '../constants/advertisers';
 import categories from '../constants/categories';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexDirection: 'column'
-  }
+    flexDirection: 'column',
+  },
 }));
 
-const AdvertiserCards = props => {
+const AdvertiserCards = (props) => {
   const classes = useStyles();
-  const cats = useSelector(state => state.cats);
+  const cats = useSelector((state) => state.cats);
   const { primary, secondary, tertiary } = cats;
   const [yelpCategories, setYelpCategories] = useState([]);
   const [ads, setAds] = useState([]);
@@ -23,9 +23,9 @@ const AdvertiserCards = props => {
   useEffect(() => {
     if (tertiary !== '') {
       const tertiaryCategory = categories
-        .find(c => c.id === primary)
-        .secondary.find(c => c.id === secondary)
-        .tertiary.find(c => c.id === tertiary);
+        .find((c) => c.id === primary)
+        .secondary.find((c) => c.id === secondary)
+        .tertiary.find((c) => c.id === tertiary);
       if (tertiaryCategory && tertiaryCategory.yelp) {
         setYelpCategories(tertiaryCategory.yelp);
       } else {
@@ -38,10 +38,17 @@ const AdvertiserCards = props => {
 
   useEffect(() => {
     if (yelpCategories.length > 0) {
-      const newAds = advertisers.filter(a =>
-        a.categories.some(c => yelpCategories.includes(c))
-      );
-      setAds(newAds);
+      const intersection = advertisers.filter((ad) => {
+        let shouldIncludeAd = false;
+        ad.yelp.forEach((cat) => {
+          if (yelpCategories.includes(cat)) {
+            shouldIncludeAd = true;
+          }
+        });
+        return shouldIncludeAd;
+      });
+
+      setAds(intersection);
     } else {
       setAds([]);
     }
@@ -49,7 +56,7 @@ const AdvertiserCards = props => {
 
   return (
     <div className={classes.root}>
-      {tertiary !== '' && ads.map(a => <Advertiser key={a.id} {...a} />)}
+      {tertiary !== '' && ads.map((a) => <Advertiser key={a.id} {...a} />)}
     </div>
   );
 };
