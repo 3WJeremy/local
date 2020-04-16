@@ -170,7 +170,7 @@ const advertisers = [
     id: 'theofficeofjorgeperazzo',
     title: 'The Office of Jorge Perazzo',
     logo: 'jorge-perazzo.png',
-    address: ['25350 Magic Mountain Parkway Suite 300', 'Valencia, CA 91355'],
+    address: ['23822 Valencia Blvd Suite 306', 'Valencia, CA 91355'],
     phone: '(661) 481-2219',
     website: 'https://www.jorgeperazzo.com/',
     articles: [
