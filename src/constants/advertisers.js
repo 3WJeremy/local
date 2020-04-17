@@ -9,6 +9,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/dr-sepi-fatahi-valencia-dentist-lives-a-childhood-dream/',
     ],
+    accolades: [],
     yelp: [
       'cosmeticdentists',
       'dentists',
@@ -33,6 +34,7 @@ const advertisers = [
     phone: '(818) 574-5100 (310) 734-8525',
     website: 'http://millenniumdental.net',
     articles: ['https://wealthwisdomwellness.us/issue-2/dr-eddie-siman/'],
+    accolades: [],
     yelp: [
       'cosmeticdentists',
       'dentists',
@@ -54,6 +56,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/aging-with-power-myles-mcnamara-comfort-keepers-in-home-care-help-seniors-stay-home/',
     ],
+    accolades: [],
     yelp: ['homehealthcare', 'seniorcenters', 'eldercareplanning'],
   },
   {
@@ -65,6 +68,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/life-coach-marguerite-berg-for-each-person-in-life-its-my-shoes-my-journey/',
     ],
+    accolades: [],
     yelp: ['lifecoach'],
   },
   {
@@ -77,6 +81,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/all-in-the-family-nola-aronson-advanced-audiology-help-the-peeples-hear-better/',
     ],
+    accolades: [],
     yelp: ['audiologist', 'hearingaidproviders'],
   },
   {
@@ -87,6 +92,7 @@ const advertisers = [
     phone: '(661) 284-1900',
     website: 'https://www.audiologyassociates.net/',
     articles: ['https://wealthwisdomwellness.us/issue-2/can-you-hear-me-now/'],
+    accolades: [],
     yelp: ['audiologist', 'hearingaidproviders'],
   },
   {
@@ -99,6 +105,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-3/health-coach-brings-hipness-to-his-healing-practice/',
     ],
+    accolades: [],
     yelp: ['chiropractors'],
   },
   {
@@ -111,6 +118,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/dr-craig-j-helm-takes-a-closer-look-at-summer-eye-injuries/',
     ],
+    accolades: [],
     yelp: [
       'physicians',
       'opthamologists',
@@ -128,6 +136,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-4/beyond-fang-ibds-amy-smith-spotlights-four-high-performing-stocks/',
     ],
+    accolades: [],
     yelp: ['investing'],
   },
   {
@@ -141,6 +150,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-2/you-can-retire-in-style-without-paying-fees-or-losing-your-principal/',
     ],
+    accolades: [],
     yelp: ['lifeinsurance'],
   },
   {
@@ -153,6 +163,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-2/want-to-create-financial-fitness-for-life/',
     ],
+    accolades: [],
     yelp: ['financialservices', 'financialadvising'],
   },
   {
@@ -164,6 +175,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-3/fred-wachtel-helps-families/',
     ],
+    accolades: [],
     yelp: ['financialservices', 'financialadvising'],
   },
   {
@@ -176,6 +188,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-3/family-flying-and-federer/',
     ],
+    accolades: [],
     yelp: ['taxservices'],
   },
   {
@@ -188,6 +201,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-3/jeff-brandolino-on-building-a-brand/',
     ],
+    accolades: [],
     yelp: [
       'commercialrealestate',
       'mortgagebrokers',
@@ -208,6 +222,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-1/progressive-insulation-windows/',
     ],
+    accolades: [],
     yelp: ['insulationinstallation', 'windowsinstallation'],
   },
   {
@@ -219,6 +234,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-1/as-gentle-as-a-butterfly/',
     ],
+    accolades: [],
     yelp: ['pest_control'],
   },
   {
@@ -232,6 +248,7 @@ const advertisers = [
     articles: [
       'https://wealthwisdomwellness.us/issue-1/building-lasting-family-wealth/',
     ],
+    accolades: [],
     yelp: [
       'estateplanning',
       'willstrustsprobates',

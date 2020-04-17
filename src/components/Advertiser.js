@@ -8,42 +8,47 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import LanguageIcon from '@material-ui/icons/Language';
 import LinkIcon from '@material-ui/icons/Link';
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   card: {
     display: 'flex',
     justifyContent: 'space-between',
     padding: theme.spacing(1, 2),
-    borderRadius: 6
+    borderRadius: 6,
   },
   media: {
     width: 200,
     height: 200,
-    flexShrink: 0
+    flexShrink: 0,
   },
   row: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   info: {
-    padding: theme.spacing(0, 2)
+    padding: theme.spacing(0, 2),
   },
   links: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   link: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
+  iconContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
 }));
 
-const Advertiser = props => {
+const Advertiser = (props) => {
   const classes = useStyles();
 
   return (
@@ -62,7 +67,7 @@ const Advertiser = props => {
             <div className={classes.info}>
               {props.address && props.address.length > 0 && (
                 <>
-                  {props.address.map(line => (
+                  {props.address.map((line) => (
                     <Typography key={line} variant='body1'>
                       {line}
                     </Typography>
@@ -87,11 +92,24 @@ const Advertiser = props => {
               )}
               {props.articles && props.articles.length > 0 && (
                 <div>
-                  {props.articles.map(article => (
+                  {props.articles.map((article) => (
                     <Typography key={article} variant='body1'>
                       <Link href={article} className={classes.link}>
                         <LinkIcon /> 3W Article
                       </Link>
+                    </Typography>
+                  ))}
+                </div>
+              )}
+              {props.accolades && props.accolades.length > 0 && (
+                <div>
+                  {props.accolades.map((accolade) => (
+                    <Typography
+                      key={accolade}
+                      variant='body1'
+                      className={classes.iconContainer}
+                    >
+                      <EmojiEventsIcon /> {accolade}
                     </Typography>
                   ))}
                 </div>
