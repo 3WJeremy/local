@@ -19,5 +19,6 @@ deploy:
   strategy: git
   local_dir: ./build
   edge: true
+  fqdn: santaclarita.wealthwisdomwellness.us
   on:
     branch: master
