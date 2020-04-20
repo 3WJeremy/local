@@ -1,5 +1,5 @@
 const settings = {
-  prependPath: '/local',
+  prependPath: '',
   title: 'Santa Clarita',
   yelpSearchUrl: 'https://api.yelp.com/v3/businesses/search',
   proxy: 'https://cors-anywhere.herokuapp.com/',
