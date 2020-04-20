@@ -8,7 +8,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import 'typeface-roboto';
 
 import theme from './theme';
-import settings from './constants/settings';
 import App from './App';
 import categoriesReducer from './store/reducers/categories';
 
@@ -20,7 +19,7 @@ const app = (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename={`${settings.prependPath}/`}>
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </ThemeProvider>
