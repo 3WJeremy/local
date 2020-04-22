@@ -1,6 +1,12 @@
 const settings = {
   prependPath: '',
   title: 'Santa Clarita',
+  additionalLocations: [
+    {
+      title: 'La Cañada Flintridge',
+      url: 'https://lacanada.wealthwisdomwellness.us',
+    },
+  ],
   yelpSearchUrl: 'https://api.yelp.com/v3/businesses/search',
   proxy: 'https://cors-anywhere.herokuapp.com/',
   resultsPerPage: 12,
