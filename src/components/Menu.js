@@ -25,12 +25,11 @@ const Input = withStyles((theme) => ({
     },
   },
   input: {
-    borderRadius: 4,
-    position: 'relative',
     backgroundColor: theme.palette.secondary,
     color: '#FFF',
     border: 'none',
-    fontSize: 24,
+    fontSize: 24,=
+    lineHeight: '28px',
     padding: '0',
   },
 }))(InputBase);
